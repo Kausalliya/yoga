@@ -26,7 +26,7 @@ SECRET_KEY = 'jse@h&jx_&z8b0j6(wp)!7j&v!e%i74+8-(0n!bxpr(=q9y)o%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -128,4 +128,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT =  os.path.join(BASE_DIR,'media/') 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
