@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="TemplateMo">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+        <title>SignUp</title>
+    
+        <!-- Bootstrap core CSS -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    
+        <!-- Additional CSS Files -->
+        <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+        <link rel="stylesheet" href="{% static 'css/templatemo-finance-business.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.css' %}">
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        
+        <!-- Additional Scripts -->
+        <script src="{% static 'js/custom.js' %}"></script>
+        <script src="{% static 'js/owl.js' %}"></script>
+        <script src="{% static 'js/slick.js' %}"></script>
+        <script src="{% static 'js/accordions.js' %}"></script>
+        
+        <script language = "text/Javascript"> 
+          cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+          function clearField(t){                   //declaring the array outside of the
+          if(! cleared[t.id]){                      // function makes it static and global
+              cleared[t.id] = 1;  // you could use true and false, but that's more typing
+              t.value='';         // with more chance of typos
+              t.style.color='#fff';
+              }
+          }
+        </script>
+          <style>
+            .Modern-Slider .item-1 .img-fill {
+                background-color: white;
+	    
+            }
+.sub-header {
+	background-color: #2c1d35;
+	height:80px;
+	line-height: 46px;
+}
+.sub-footer {
+	background-color: #2c1d35;
+  height:55px;
+	text-align: center;
+	padding: 25px 0px;
+}
+.Modern-Slider .item .img-fill {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height:60%;}
+.Modern-Slider .text-content {
+	  text-align:center;
+  	width:60%;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+    background-color: rgba(155, 120, 191, 0.462);
+    padding: 50px;
+} 
+.Modern-Slider .item h6 {
+  margin-bottom: 15px;
+  font-size:30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color:#2d004b;
+  animation:fadeOutRight 1s both;
+}
+
+.Modern-Slider .item h4 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-size:40px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color:#FFF;
+  overflow:hidden;
+  animation:fadeOutLeft 1s both;
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .active>.nav-link,
+.navbar .navbar-nav .nav-link.current,
+.navbar .navbar-nav .nav-link.show,
+.navbar .navbar-nav .show>.nav-link {
+	color: #bf5eec;
+	border-bottom: 3px solid #bf5eec;
+}
+
+.signup-form {
+  font-family: "Roboto", sans-serif;
+  width:650px;
+  margin:30px auto;
+  background:linear-gradient(to right, #fd83ff47 0%, #f573f745 50%, #dd7fff6c 99%);
+  border-radius: 10px;
+
+}
+
+.form-header  {
+  background-color: #754882;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.form-header h1 {
+  font-size: 25px;
+  text-align:center;
+  color:rgb(255, 255, 255);
+  padding:20px 0;
+  border-bottom:1px solid #cccccc;
+}
+/*---------------------------------------*/
+/* Form Body */
+/*---------------------------------------*/
+.form-body {
+  padding:10px 40px;
+  color:rgb(52, 4, 57);
+}
+
+.form-group{
+  margin-bottom:20px;
+}
+
+.form-body .label-title {
+  color:#36004a;
+  font-size: 17px;
+  font-weight: bold;
+  padding:8px;
+}
+
+.form-body .form-input {
+    font-size: 17px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #8f078c;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    outline: none;
+}
+
+
+
+.horizontal-group .left{
+  float:left;
+  width:49%;
+}
+
+.horizontal-group .right{
+  float:right;
+  width:49%;
+}
+
+input[type="file"] {
+ outline: none;
+ cursor:pointer;
+ font-size:15px;
+}
+
+#range-label {
+ width:15%;
+ padding:5px;
+ background-color: #ba281b;
+ color:white;
+ border-radius: 5px;
+ font-size: 17px;
+ position: relative;
+ top:-8px;
+}
+
+
+::-webkit-input-placeholder {
+ color:#d9d9d9;
+}
+
+/*---------------------------------------*/
+/* Form Footer */
+/*---------------------------------------*/
+.form-footer {
+ clear:both;
+}
+/*---------------------------------------*/
+/* Form Footer */
+/*---------------------------------------*/
+.signup-form .form-footer  {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding:10px 40px;
+  text-align: center;
+  border-top: 1px solid #cccccc;
+}
+
+.form-footer span {
+  float:left;
+  margin-top: 10px;
+  color:#999;  
+  font-style: italic;
+  font-weight: thin;
+}
+
+.btn {
+   display:inline-block;
+   padding:10px 20px;
+   background-color: #b51bba;
+   font-size:17px;
+   border:none;
+   border-radius:5px;
+   color:#ffffff;
+   cursor:pointer;
+}
+
+.btn:hover {
+  background-color: #640f68;
+  color:white;
+}
+ </style>
+</head>
+<body>
+ 
+  <!-- Header -->
+  <div class="sub-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="{% url 'open_main' %}"><h2 >RFC Technological College</h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="{% url 'open_main' %}">Home
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'open_signup' %}">SignUp <img src="{% static 'image/add-user.png' %}"  width="20"></a>
+                <span class="sr-only">(current)</span>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'open_signin' %}">SignIn <img src="{% static 'image/user.png' %}"  width="20"></a>
+              </li>                          
+             
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  {% for message in messages %}
+     <p style="width: 60%;margin-left:auto;margin-right:auto;color: #f9210d;text-align: center;">
+      {{ message }}
+     </p>
+  {% endfor %}
+  <div class="main-banner header-text" id="top">
+      <div class="Modern-Slider">
+        <div class="item item-1">
+          <div class="img-fill">
+            <form class="signup-form" action="{% url 'register' %}" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+            <div class="form-header">
+                 <h1>SignUp</h1>
+            </div>
+            <div class="form-body">
+
+                <!-- Firstname and Lastname -->
+                <div class="horizontal-group">
+                    <div class="form-group left">
+                    
+                        <label for="firstname" class="label-title">First name </label>
+                        <input type="text" name="fname" class="form-input" placeholder="enter your first name" required="required" />
+                    </div>
+                    <div class="form-group right">
+                        <label for="lastname" class="label-title">Last name</label>
+                        <input type="text" name="lname" class="form-input" placeholder="enter your last name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label for="Address" class="label-title">Address</label>
+                  <textarea  class="form-input" name="address" placeholder="enter your email" required="required" cols="4" rows="3"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="label-title">Email</label>
+                    <input type="email" name="email" class="form-input" placeholder="enter your email" required="required">
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="label-title">Username</label>
+                    <input type="text" name="uname" class="form-input" placeholder="enter your username" required="required">
+                  </div>
+                  
+                  <!-- Password and confirm password -->
+                  <div class="horizontal-group">
+                  
+                    <div class="form-group left">
+                      <label for="password" class="label-title">Password </label>
+                      <input type="password" name="password" class="form-input" placeholder="enter your password" required="required">
+                    </div>
+                  
+                    <div class="form-group right">
+                      <label for="confirm-password" class="label-title">Confirm Password </label>
+                      <input type="password" class="form-input" name="cpassword" placeholder="enter your password again" required="required">
+                    </div>
+                    <div class="form-group">
+                      <label for="experience" class="label-title">Age</label>
+                      <input type="number" min="18" max="80"  value="18" class="form-input" name="age" required="required"  > 
+                    </div>
+                    
+                    <div class="horizontal-group">
+
+                        <div class="form-group left" >
+                            <label class="label-title">Gender:</label>
+                            <div class="input-group ">
+                                <label for="male">
+                                    <input type="radio" name="gender" value="male" id="male" required="required" > Male</label>
+                                <label for="female">
+                                    <input type="radio" name="gender" value="female" id="female" required="required" > Female</label>
+                                    <label for="other">
+                                      <input type="radio" name="gender" value="other" id="female" required="required" >Other</label>
+                            </div>
+                        </div>
+                    
+                            
+                            <div class="form-group right">
+                              <label for="choose-file" class="label-title">Upload Profile Picture</label>
+                              <input type="file" name="choose-file" accept="image/*" >
+                            </div>
+                          
+                         </div>
+                         <div class="form-footer">
+                  
+                                                   
+                            <button type="submit" class="btn">Register</button>
+                          </div>
+                        
+                    </div>
+                  
+            
+            </div>
+            
+            </div>
+           </form>
+          </div>
+        </div>
+
+      </div>
+  </div>
+  <!-- Banner Ends Here -->
+
+
+  <!-- Footer Starts Here -->
+  <div class="sub-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>Copyright &copy; 2020 RFC Technological College</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
